@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.skatincorp.le.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.skatincorp.le.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_pronombresFragment"
+            app:destination="@id/pronombresFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_animalesFragment"
+            app:destination="@id/animalesFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_coloresFragment2"
+            app:destination="@id/coloresFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalesFragment"
+        android:name="com.skatincorp.le.AnimalesFragment"
+        android:label="fragment_animales"
+        tools:layout="@layout/fragment_animales" >
+        <action
+            android:id="@+id/action_animalesFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pronombresFragment"
+        android:name="com.skatincorp.le.PronombresFragment"
+        android:label="fragment_pronombres"
+        tools:layout="@layout/fragment_pronombres" >
+        <action
+            android:id="@+id/action_pronombresFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coloresFragment"
+        android:name="com.skatincorp.le.ColoresFragment"
+        android:label="fragment_colores"
+        tools:layout="@layout/fragment_colores" >
+        <action
+            android:id="@+id/action_coloresFragment_to_baseFragment"
+            app:destination="@id/baseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.skatincorp.le.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base">
+        <argument
+            android:name="origin"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <action
+            android:id="@+id/action_baseFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.skatincorp.le.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="item"
+            app:argType="com.skatincorp.le.Item"
+            android:defaultValue="@null"
+            app:nullable="true"/>
+    </fragment>
+
+</navigation>

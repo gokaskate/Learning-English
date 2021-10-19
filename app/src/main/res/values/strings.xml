@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">L.E</string>
+    <string name="button1">Lets Go</string>
+    <string name="img1">Lapiz 1</string>
+    <string name="img2">Lapiz 2</string>
+    <string name="img3">Puzzle 1</string>
+    <string name="img4">Puzzle 2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
