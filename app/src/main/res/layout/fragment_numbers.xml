@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".NumbersFragment">
+
+    <ImageView
+        android:id="@+id/imageViewnumber"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="308dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/holi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageButton
+        android:id="@+id/play6num"
+        android:layout_width="75dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="365dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="33dp"
+        android:src="@drawable/numeros"
+        app:layout_constraintBottom_toTopOf="@+id/play6num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,6 +43,8 @@ class BaseFragment : Fragment() {
             1 -> Lists.pronombres
             2 -> Lists.animales
             3 -> Lists.colores
+            4 -> Lists.abecedario
+            5 -> Lists.numeros
             else -> arrayOf()
         }
         listview.adapter = ListAdapter(list,::onclick)

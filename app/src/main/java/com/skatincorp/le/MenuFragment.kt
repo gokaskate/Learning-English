@@ -30,9 +30,11 @@ class MenuFragment : Fragment() {
         val button1 = view.findViewById<Button>(R.id.btn_letters)
         val button2 = view.findViewById<Button>(R.id.btn_animals)
         val button3 = view.findViewById<Button>(R.id.btn_colors)
+        val button4 = view.findViewById<Button>(R.id.btn_numers)
         button1.setOnClickListener { findNavController().navigate(R.id.action_menuFragment_to_pronombresFragment) }
         button2.setOnClickListener { findNavController().navigate(R.id.action_menuFragment_to_animalesFragment) }
         button3.setOnClickListener { findNavController().navigate(R.id.action_menuFragment_to_coloresFragment2) }
+        button4.setOnClickListener { findNavController().navigate(R.id.action_menuFragment_to_numbersFragment) }
         return view
     }
 

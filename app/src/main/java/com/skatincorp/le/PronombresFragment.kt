@@ -14,7 +14,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 
-class PronombresFragment : Fragment() {
+class PronombresFragment : Fragment(), View.OnClickListener {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,10 +33,9 @@ class PronombresFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_pronombres, container, false)
         val btn_img1 = view.findViewById<ImageButton>(R.id.play1)
-        btn_img1.setOnClickListener {
-            val args = 1
-            val bundle = bundleOf("origin" to args)
-            findNavController().navigate(R.id.action_pronombresFragment_to_baseFragment,bundle) }
+        btn_img1.setOnClickListener(this)
+        val btn_img2 = view.findViewById<ImageButton>(R.id.play)
+        btn_img2.setOnClickListener(this)
         return view
     }
 
@@ -49,5 +48,16 @@ class PronombresFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onClick(p0: View?) {
+        val args = when (p0?.id) {
+            R.id.play1 -> 1
+            R.id.play -> 4
+            else -> 1
+
+        }
+        val bundle = bundleOf("origin" to args)
+        findNavController().navigate(R.id.action_pronombresFragment_to_baseFragment, bundle)
     }
 }
