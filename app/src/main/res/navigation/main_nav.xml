@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_menuFragment_to_numbersFragment"
             app:destination="@id/numbersFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_actividadFragment"
+            app:destination="@id/actividadFragment" />
     </fragment>
     <fragment
         android:id="@+id/animalesFragment"
@@ -91,5 +94,10 @@
             android:id="@+id/action_numbersFragment_to_baseFragment"
             app:destination="@id/baseFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/actividadFragment"
+        android:name="com.skatincorp.le.ActividadFragment"
+        android:label="fragment_actividad"
+        tools:layout="@layout/fragment_actividad" />
 
 </navigation>
